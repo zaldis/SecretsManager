@@ -1,0 +1,6 @@
+*.db
+.env
+backups/
+
+venv/
+app/**/__pycache__/*

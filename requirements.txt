@@ -1,0 +1,5 @@
+pywebview[qt]==3.5
+flake8==4.0.1
+pyperclip==1.8.2
+python-dotenv==0.19.1
+cryptography==35.0.0
