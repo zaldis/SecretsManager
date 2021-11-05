@@ -14,4 +14,4 @@ ALPHABET = os.environ.get(
 PASSWORD_SIZE = int(os.environ.get('SIZE', '30'))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 CLIP_MODULE = os.environ.get('CLIP')
-CURRENT_DIR = pathlib.Path('.')
+CURRENT_DIR = pathlib.Path(os.path.dirname(__file__))

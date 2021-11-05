@@ -66,7 +66,7 @@ class DBStorageManager(StorageManager):
         with self.connector() as connection:
             sql = ''
             sql_file_path = (
-                settings.CURRENT_DIR / 'app' / 'sql' / 'create_tables.sql'
+                settings.CURRENT_DIR / 'sql' / 'create_tables.sql'
             )
             with open(sql_file_path, 'r') as f:
                 sql = f.read()
