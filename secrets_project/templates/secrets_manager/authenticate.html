@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load style_filter %}
+
+
+{% block header %}Authentication{% endblock %}
+
+
+{% block body %}
+<form method="post">
+    {% csrf_token %}
+    {% include "snippets/form-errors.html" %}
+
+    {% with field=form.encoding_key %}
+        {% include "snippets/input-field.html" with field=field %}
+    {% endwith %}
+
+    {% with field=form.generate_new %}
+        {% include "snippets/check-field.html" with field=field %}
+    {% endwith %}
+
+    <input type="submit"
+           value="Log In"
+           class="btn btn-outline-dark form-control mt-3">
+</form>
+{% endblock %}
+
+

@@ -15,51 +15,30 @@
 <body>
     <div class="container">
         <nav>
-            <ul class="nav justify-content-center">
-                {% comment %}
+            <ul class="nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ routers.index }}">
-                        Index
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ routers.books }}">
-                        Books
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ routers.readers }}">
-                        Readers
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ routers.users }}">
-                        Users
+                    <a href="{% url 'secret-list' %}" class="nav-link active" aria-current="page">
+                        Secrets
                     </a>
                 </li>
 
-                {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <span class="nav-link active" aria-current="page">
-                        | {{ user.username }} (
-                            <a href="{% url 'logout' %}">Выйти</a>
-                        )
-                    </span>
+                    <a href="#" class="nav-link active" aria-current="page">
+                        |
+                    </a>
                 </li>
-               {% else %}
+
                 <li class="nav-item">
                     <a href="{% url 'login' %}" class="nav-link active" aria-current="page">
-                        | Войти
+                        Update encoding key
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'create-user' %}" class="nav-link active" aria-current="page">
-                        Регистрация
+                    <a href="{% url 'logout' %}" class="nav-link active" aria-current="page">
+                        Clear session
                     </a>
                 </li>
-                {% endif %}
             </ul>
-            {% endcomment %}
         </nav>
 
         <h1 class="mt-3 mb-5">
